@@ -25,25 +25,24 @@ const OffersSection = () => {
         <section className="py-24 bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950 text-white">
             <div className="container mx-auto px-6 lg:px-12">
                 <h2 className="text-3xl font-bold mb-6">Unsere Angebote</h2>
-                <div className="space-y-2 max-w-5xl mb-6">
-                    <p className="">
-                        Verabschiedet euch von den langweiligen Museen- und Theaterbesuchen und verbringt eure Zeit
-                        voller Spannung <span className="text-primary-500 font-semibold">Escape Game Art</span>!
+                <div className="space-y-4 max-w-5xl mb-6">
+                    <p>
+                        Lasst langweilige Museums- oder Theaterbesuche hinter euch und taucht ein in spannende Abenteuer
+                        bei <span className="text-primary-500 font-semibold">Escape Game Art</span>!
                     </p>
-                    <p className="">
-                        Ab jetzt braucht ihr euch Fragen wie "Was können wir zusammen unternehmen?" nicht mehr stellen.
-                        Denn die Antwort ist ganz einfach. Ob{" "}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600 font-semibold">
-                            Firmen– bzw. Betriebsevent, Junggesellenabschiede, Mädchenabende, Geburtstage bzw. Kindergeburtstage, Klassenausflüge
-                        </span> oder <span className="font-semibold text-primary-500">Ferien</span>. Kommt zu uns und verbringt zusammen mindestens eine Stunde voller Erlebnisse.
+                    <p>
+                        Schluss mit der Frage "Was können wir zusammen unternehmen?". Ob{" "}
+                        <span
+                            className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600 font-semibold">
+            Firmenevent, Junggesellenabschied, Mädelsabend, Geburtstag, Kindergeburtstag, Klassenausflug
+        </span> oder <span className="font-semibold text-primary-500">Ferien</span> – bei uns erlebt ihr mindestens eine
+                        Stunde voller Spaß und Teamgeist!
                     </p>
-                    <p className="">
-                        Jeder Escape Room erfordert hohe Konzentration, gemeinsame Kommunikation und logisches Vorgehen.
-                        Dieses gibt euch – den Kolleginnen und Kollegen, Geschäftspartnern, Freunden – die Gelegenheit
-                        sich auf eine spannendere Art kennen zu lernen. Unsere <span
-                        className="text-primary-500 font-semibold">Escape Game Art</span> gibt euren Anlässen eine
-                        ganz besondere Note und ist eine schöne Aufwärmung vor langen Abenden… Schaut unsere Angebote
-                        an! Es ist für jeden irgendetwas dabei!
+                    <p>
+                        Unsere Escape Rooms fördern Konzentration, Zusammenarbeit und logisches Denken. Egal ob mit
+                        Kolleginnen, Geschäftspartnern oder Freunden – ihr lernt euch auf neue, spannende Weise
+                        kennen. <span className="text-primary-500 font-semibold">Escape Game Art</span> verleiht jedem
+                        Anlass das gewisse Extra und ist der perfekte Start für einen unvergesslichen Abend. Schaut euch unsere Angebote an und findet das perfekte Abenteuer für euch!
                     </p>
                 </div>
                 <p className="text-sm italic mb-12">
@@ -80,10 +79,10 @@ const OffersSection = () => {
 
             {/* Dialog */}
             {selectedOffer && (
-                <Dialog size="5xl" className="z-50" open={isOpen} onClose={closeDialog}>
+                <Dialog size="5xl" className="z-40" open={isOpen} onClose={closeDialog}>
                     <DialogTitle>{selectedOffer.name}</DialogTitle>
                     <DialogDescription>{selectedOffer.description}</DialogDescription>
-                    <DialogBody>
+                    <DialogBody className="z-50">
                         {selectedOffer.popup.options ? (
                             <div>
                                 <p className="mb-4">{selectedOffer.popup.details}</p>

@@ -29,7 +29,7 @@ interface RoomProps {
 const rooms: RoomProps[] = [
     {
         name: "Magie des Museums",
-        category: "Magisch",
+        category: "Abenteuer",
         previewImage: "/assets/images/magie/Magie-Anubis.jpg",
         gallery: [
             "/assets/images/magie/Magie-Berg.jpg",
@@ -74,7 +74,7 @@ const rooms: RoomProps[] = [
     {
         name: "Last Arrival",
         category: "Science-Fiction",
-        previewImage: "/assets/images/lastarrival/LastArrival-Gitter.jpeg",
+        previewImage: "/assets/images/lastarrival/LastArrival-Preview.webp",
         gallery: [
             "/assets/images/lastarrival/LastArrival-Raum.jpeg",
             "/assets/images/lastarrival/LastArrival-Gitter.jpeg",
@@ -103,11 +103,7 @@ interface FAQItem {
 const FAQs: FAQItem[] = [
     {
         question: "Wie viele Personen können gleichzeitig spielen?",
-        answer: "Damit ihr innerhalb von 60 Minuten die Chance habt, alle Aufgaben zu lösen, schlagen wir mind. 3 Teilnehmer vor. Ansonsten sind für das Spiel bis zu 6 Teilnehmer angedacht. Solltet ihr doch mehr sein, könnt ihr uns diesbezüglich gerne kontaktieren und wir finden bestimmt eine Lösung.",
-    },
-    {
-        question: "Gibt es Altersbeschränkungen?",
-        answer: "Da hierbei das logische Denken eine große Rolle spielt, würden wir das Spiel für Teilnehmer erst ab 10 Jahren empfehlen. Aber es können auch Kinder in jedem Alter mitmachen, da unsere Spiele keine Gruselgeschichten enthalten. Jedes Kind, unabhängig vom Alter, wird vollständig mitgezählt, da die Anzahl der Teilnehmer in den Spielräumen 5 bzw. 8 Personen nicht überschreiten darf. Selbstverständlich gibt es im Alter nach oben keine Grenze.",
+        answer: "Damit ihr innerhalb von 60 Minuten die Chance habt, alle Aufgaben zu lösen, schlagen wir mind. 2 Teilnehmer vor. Ansonsten sind für das Spiel bis zu 8 Teilnehmer angedacht. Solltet ihr doch mehr sein, könnt ihr uns diesbezüglich gerne kontaktieren und wir finden bestimmt eine Lösung.",
     },
     {
         question: "Wer sollte oder darf nicht mitmachen?",
@@ -237,38 +233,34 @@ interface OfferItem {
 const offers: OfferItem[] = [
     {
         name: "Firmenevents",
-        description:
-            "Jedes moderne Unternehmen führt diverse Veranstaltungen für seine Mitarbeiter durch. Das können traditionelle Firmenevents, wie Weihnachtsfeiern oder auch gezielte Maßnahmen sein, um die Zusammenarbeit zu verbessern. Wir bieten Euch eine unvergessliche, erlebnisreiche und vergnügungsvolle Veranstaltung in unseren Escape Rooms in München an.",
+        description: "Jedes moderne Unternehmen braucht einzigartige Erlebnisse für seine Mitarbeiter – sei es eine Weihnachtsfeier, ein Teambuilding-Event oder einfach ein besonderer Ausflug. Unsere Escape Rooms in München bieten euch ein spannendes, gemeinschaftliches Erlebnis, das garantiert in Erinnerung bleibt.",
         icon: UsersIcon,
         popup: {
             title: "Firmenevents",
-            details: `
-Aus den untenstehenden Optionen könnt ihr die passende Variante für euch aussuchen, wo höchstens bis zur 19 Personen teilnehmen können:
-            `,
+            details: "Aus den untenstehenden Optionen könnt ihr die perfekte Variante für euer Team auswählen. Bis zu 19 Personen können an einem Event teilnehmen.",
             options: [
                 { room: "Da Vinci Code", people: "2-6 Personen", time: "60 Minuten", price: "155€" },
                 { room: "Magie des Museums", people: "2-8 Personen", time: "60 Minuten", price: "180€" },
                 { room: "2 Spielräume", people: "bis zu 14 Personen", time: "60 Minuten", price: "270€" },
                 { room: "2x2 Spiele nacheinander", people: "bis zu 12 Personen", time: "120min + 15min Pause", price: "470€" },
                 { room: "3 Spielräume", people: "bis zu 19 Personen", time: "60 Minuten", price: "400€" },
-                { room: "2x3 Spiele nacheinander", people: "bis zu 19 Personen", time: "120min + 15min Pause", price: "720€" },
-            ],
-        },
+                { room: "2x3 Spiele nacheinander", people: "bis zu 19 Personen", time: "120min + 15min Pause", price: "720€" }
+            ]
+        }
     },
     {
         name: "Junggesellenabschied",
         description:
-            "Seid Ihr für jeden Spaß zu haben, schlagt gerne mal über die Stränge und möchtet Euren letzten Tag in Freiheit voll auskosten, dann sollt Ihr das auch bekommen. Bevor Ihr richtig feiern geht, startet die Feier mit einem intellektuellem, abenteuerlichem und amüsantem Abend in unseren Escape Rooms in München, an.",
+            "Ihr seid bereit, euren letzten Tag in Freiheit gebührend zu feiern? Startet euren Junggesellenabschied mit einem unvergesslichen Abenteuer in unseren Escape Rooms in München – spannend, lustig und voller Teamgeist, bevor die große Party beginnt!",
         icon: HeartIcon,
         popup: {
             title: "Junggesellenabschied",
             details:
-                "Ihr wollt eure/n Freundin/Freund mit einem JGA bei uns überraschen oder bzw. du möchtest deinen JGA bei uns feiern, dann haben wir für die/den Braut/Bräutigam einen kostenfreien Eintritt.",
+                "Überrascht die/den Braut/Bräutigam mit einem einzigartigen JGA-Erlebnis! Bei uns spielt die/der zukünftige Ehepartner kostenfrei.",
             requirements: [
-                "Es müssen außer der/dem Braut/Bräutigam noch vier weitere Personen mitspielen.",
-                "Alle Teilnehmer sollen dem JGA entsprechend aussehen.",
-            ],
-        },
+                "Es müssen außer der/dem Braut/Bräutigam noch vier weitere Personen mitspielen."
+            ]
+        }
     },
     {
         name: "Studenten / Azubis",
@@ -292,44 +284,45 @@ Aus den untenstehenden Optionen könnt ihr die passende Variante für euch aussu
         icon: BookOpenIcon,
         popup: {
             title: "Klassenausflug",
-            details: "Für die Schülerinnen und Schüler, die einen Klassenausflug planen, haben wir ein Sonderangebot: Jeder Schüler zahlt nur 20 Euro.",
+            details: "Für die Schüler, die einen Klassenausflug planen, haben wir ein Sonderangebot: Jeder Schüler zahlt nur 20 Euro.",
             requirements: [
                 "Gilt ab 10 Personen.",
                 "Gilt nur von Montag bis Freitag (von 9:00–18:00 Uhr).",
                 "Es müssen mindestens zwei Spiele parallel gebucht werden.",
-                "Jeder Teilnehmer und Teilnehmerin muss einen Schülerausweis vorlegen.",
             ],
         },
     },
     {
         name: "Geburtstagsfeier",
         description:
-            "Plant ihr gerade eine Geburtstagsfeier und habt ihr noch keine außergewöhnlichen Ideen? Dann seid Ihr definitiv richtig bei uns, in Escape Room München. Unsere Geburtstagsangebote für Erwachsene und Jugendliche ab 8 Jahren findet Ihr unten.",
+            "Auf der Suche nach einer außergewöhnlichen Idee für eine Geburtstagsfeier? Bei uns, in den Escape Rooms von Escape Game Art München, erwartet euch ein spannendes Abenteuer! Unsere Angebote für Geburtstagskinder sorgen für unvergessliche Momente.",
         icon: CakeIcon,
         popup: {
             title: "Geburtstagsfeier",
-            details: "Wenn du an deinem Geburtstag bei uns spielst, dann musst du für deine Teilnahme am Spiel nichts bezahlen.",
+            details:
+                "Spielst du an deinem Geburtstag bei uns, ist deine Teilnahme komplett kostenlos!",
             requirements: [
-                "Es müssen außer Dir noch vier weitere Personen mitspielen.",
-                "Gilt nur am Tag des Geburtstages und bei Vorlage eines Nachweises wie z.B. Personalausweis.",
-            ],
-        },
+                "Es müssen mindestens vier weitere Personen mitspielen.",
+                "Das Angebot gilt nur am Tag deines Geburtstages und bei Vorlage eines Nachweises (z. B. Personalausweis).",
+                "Die Teilnahme ist erst ab einem Mindestalter von 10 Jahren möglich."
+            ]
+        }
     },
     {
         name: "Mädelsabend",
         description:
-            "Klatsch und Tratsch, Beziehungsprobleme und Liebestipps, Männer und Mode, Arbeitsstress und Alltag. Lasst das Ganze auf die Seite und verbringt im Freundinnenkreis genüssliche Stunden bei uns, in Escape Room München.",
+            "Vergesst Alltag und Stress – genießt eine unvergessliche Zeit mit euren Freundinnen bei uns! Klatsch, Tratsch und Abenteuer erwarten euch in den einzigartigen Escape Rooms von Escape Game Art München.",
         icon: ShoppingBagIcon,
         popup: {
             title: "Mädelsabend",
             details:
-                "Jeden Mittwoch bieten wir euch die Möglichkeit, mit einer Teilnehmerin weniger zu zahlen.",
+                "Montags bis Donnerstags bieten wir euch ein exklusives Angebot: Eine Teilnehmerin spielt kostenlos!",
             requirements: [
-                "Alle Teilnehmer müssen weiblich sein.",
-                "Es müssen mindestens fünf Personen mitspielen.",
-            ],
-        },
-    },
+                "Alle Teilnehmerinnen müssen weiblich sein.",
+                "Mindestens fünf Personen müssen teilnehmen."
+            ]
+        }
+    }
 ];
 
 export type {RoomProps, OfferItem, FAQItem};

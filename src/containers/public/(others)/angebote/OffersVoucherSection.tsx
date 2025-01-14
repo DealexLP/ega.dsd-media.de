@@ -20,7 +20,7 @@ const OffersVoucherSection = () => {
                 {/* Call to Action */}
                 <div className="flex justify-center">
                     <Link
-                        href="https://www-252d.bookeo.com/bookeo/b_escapegameart_start.html?buyvoucher=true"
+                        href="https://bookeo.com/escapegameart/buyvoucher?buyvoucher=true"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-8 py-4 bg-primary-500 rounded-lg text-white font-semibold text-lg shadow-lg hover:bg-primary-600 transition-colors transform duration-300 hover:scale-105"

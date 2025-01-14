@@ -41,7 +41,7 @@ const PublicHeader = ({}: PublicHeaderProps) => {
         <>
             {/* Header */}
             <header
-                className={`fixed top-0 left-0 h-24 w-full z-50 transition-all duration-300 ${
+                className={`fixed top-0 left-0 h-24 w-full z-30 transition-all duration-300 ${
                     isScrolled ? "bg-zinc-950 shadow-lg" : "bg-transparent backdrop-blur-md"
                 }`}
                 style={{

@@ -32,7 +32,7 @@ const HomeHeroSection = ({}: IHomeHeroSection) => {
                 </h1>
 
                 {/* Untertitel */}
-                <p className="mt-4 text-md sm:text-xl max-w-3xl">
+                <p className="mt-4 text-md sm:text-xl max-w-2xl">
                     Tauche ein in spannende Rätsel und unvergessliche Abenteuer bei <strong>Escape Game Art</strong>. Perfekt für Freunde, Familien und Teams – löse unsere Escape Rooms und werde Teil eines einzigartigen Erlebnisses!
                 </p>
 
@@ -43,13 +43,13 @@ const HomeHeroSection = ({}: IHomeHeroSection) => {
                             href="/#escape-rooms"
                             className="px-6 py-3 text-md sm:text-base font-medium bg-primary-500 text-black rounded-md hover:bg-primary-400 transition"
                         >
-                            Reserviere dein Spiel
+                            Buche dein Spiel
                         </Link>
                         <Link
-                            href="/src/app/(public)/(others)/faq"
+                            href="/faq"
                             className="px-6 py-3 text-sm sm:text-base font-medium bg-white/10 text-white rounded-md hover:bg-white/20 transition"
                         >
-                            Häufige Fragen
+                            Häufige gestellte Fragen
                         </Link>
                     </div>
 
@@ -58,7 +58,7 @@ const HomeHeroSection = ({}: IHomeHeroSection) => {
                         <div className="flex md:flex-col items-center gap-3">
                             <PuzzlePieceIcon className="w-6 h-6 text-primary-500"/>
                             <p className="text-sm sm:text-base">
-                                Kreative und immersive Rätsel
+                                Kreative und spannende Rätsel
                             </p>
                         </div>
                         <div className="flex md:flex-col items-center gap-3">
@@ -68,7 +68,7 @@ const HomeHeroSection = ({}: IHomeHeroSection) => {
                         <div className="flex md:flex-col items-center gap-3">
                             <UsersIcon className="w-6 h-6 text-primary-500" />
                             <p className="text-sm sm:text-base">
-                                Ideal für Gruppen bis 8 Personen
+                                Ideal für Gruppen bis zu 19 Personen
                             </p>
                         </div>
                         <div className="flex md:flex-col items-center gap-3">
